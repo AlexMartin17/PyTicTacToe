@@ -11,7 +11,7 @@ HEIGHT = 600
 class MenuView(arcade.View):
     def on_show(self):
         arcade.set_background_color(arcade.color.AZURE)
-
+        
     def on_draw(self):
         arcade.start_render()
         arcade.draw_text("Tic Tac Toe", WIDTH/2, 300, arcade.color.WHITE, font_size=50, anchor_x="center")
@@ -38,120 +38,87 @@ class GameView(arcade.View):
 
     def CheckBoard(self):
         global win, p, c
-
         if self.board[0] == 'x' and self.board[1] == 'x' and self.board[2] == 'x':
             if p == "X":
                 win = "p"
             else:
-                print("Computer wins")
                 win == "c"
         elif self.board[3] == 'x' and self.board[4] == 'x' and self.board[5] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win == "c"
         elif self.board[6] == 'x' and self.board[7] == 'x' and self.board[8] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win == "c"
         elif self.board[0] == 'x' and self.board[3] == 'x' and self.board[6] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win = "c"
         elif self.board[1] == 'x' and self.board[4] == 'x' and self.board[7] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win = "c"
         elif self.board[2] == 'x' and self.board[5] == 'x' and self.board[8] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win = "c"
         elif self.board[0] == 'x' and self.board[4] == 'x' and self.board[8] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win == "c"
         elif self.board[2] == 'x' and self.board[4] == 'x' and self.board[6] == 'x':
             if p == "X":
-                print("You win!!")
                 win = "p"
             else:
-                print("Computer wins")
                 win = "c"
         elif self.board[0] == 'o' and self.board[1] == 'o' and self.board[2] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[3] == 'o' and self.board[4] == 'o' and self.board[5] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[6] == 'o' and self.board[7] == 'o' and self.board[8] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[0] == 'o' and self.board[3] == 'o' and self.board[6] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[1] == 'o' and self.board[4] == 'o' and self.board[7] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[2] == 'o' and self.board[5] == 'o' and self.board[8] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[0] == 'o' and self.board[4] == 'o' and self.board[8] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif self.board[2] == 'o' and self.board[4] == 'o' and self.board[6] == 'o':
               if p == "O":
-                  print("You win!!")
                   win = "p"
               else:
-                  print("Computer wins")
                   win = "c"
         elif all(self.board):
-            print("It's a draw")
             win = "d"
 
         if win != "0":
@@ -296,51 +263,111 @@ class GameView(arcade.View):
         global p, c
         if p == "O":
             self.CheckBoard()
-            if 0 <= x <= 200 and 400 <= y <= 600:
-                self.board[0] = "o"
-            elif 200 <= x <= 400 and 400 <= y <= 600:
-                self.board[1] = "o"
-            elif 400 <= x <= 600 and 400 <= y <= 600:
-                self.board[2] = "o"
-            elif 0 <= x <= 200 and 200 <= y <= 400:
-                self.board[3] = "o"
-            elif 200 <= x <= 400 and 200 <= y <= 400:
-                self.board[4] = "o"
-            elif 400 <= x <= 600 and 200 <= y <= 400:
-                self.board[5] = "o"
-            elif 0 <= x <= 200 and 0 <= y <= 200:
-                self.board[6] = "o"
-            elif 200 <= x <= 400 and 0 <= y <= 200:
-                self.board[7] = "o"
-            elif 400 <= x <= 600 and 0 <= y <= 200:
-                self.board[8] = "o"
-            self.CheckBoard()
-            self.PcMove()
-            self.CheckBoard()
+            try:
+                if 0 <= x <= 200 and 400 <= y <= 600:
+                    if self.board[0] == 0:
+                        self.board[0] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 200 <= x <= 400 and 400 <= y <= 600:
+                    if self.board[1] == 0:
+                        self.board[1] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 400 <= x <= 600 and 400 <= y <= 600:
+                    if self.board[2] == 0:
+                        self.board[2] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 0 <= x <= 200 and 200 <= y <= 400:
+                    if self.board[3] == 0:
+                        self.board[3] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 200 <= x <= 400 and 200 <= y <= 400:
+                    if self.board[4] == 0:
+                        self.board[4] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 400 <= x <= 600 and 200 <= y <= 400:
+                    if self.board[5] == 0:
+                        self.board[5] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 0 <= x <= 200 and 0 <= y <= 200:
+                    if self.board[6] == 0:
+                        self.board[6] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 200 <= x <= 400 and 0 <= y <= 200:
+                    if self.board[7] == 0:
+                        self.board[7] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                elif 400 <= x <= 600 and 0 <= y <= 200:
+                    if self.board[8] == 0:
+                        self.board[8] = "o"
+                    else:
+                        raise Exception("Not allowed")
+                self.CheckBoard()
+                self.PcMove()
+                self.CheckBoard()
+            except Exception:
+                pass
 
         elif p == "X":
-            self.CheckBoard()
-            if 0 <= x <= 200 and 400 <= y <= 600:
-                self.board[0] = "x"
-            elif 200 <= x <= 400 and 400 <= y <= 600:
-                self.board[1] = "x"
-            elif 400 <= x <= 600 and 400 <= y <= 600:
-                self.board[2] = "x"
-            elif 0 <= x <= 200 and 200 <= y <= 400:
-                self.board[3] = "x"
-            elif 200 <= x <= 400 and 200 <= y <= 400:
-                self.board[4] = "x"
-            elif 400 <= x <= 600 and 200 <= y <= 400:
-                self.board[5] = "x"
-            elif 0 <= x <= 200 and 0 <= y <= 200:
-                self.board[6] = "x"
-            elif 200 <= x <= 400 and 0 <= y <= 200:
-                self.board[7] = "x"
-            elif 400 <= x <= 600 and 0 <= y <= 200:
-                self.board[8] = "x"
-            self.CheckBoard()
-            self.PcMove()
-            self.CheckBoard()
+                self.CheckBoard()
+                try:
+                    if 0 <= x <= 200 and 400 <= y <= 600:
+                        if self.board[0] == 0:
+                            self.board[0] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 200 <= x <= 400 and 400 <= y <= 600:
+                        if self.board[1] == 0:
+                            self.board[1] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 400 <= x <= 600 and 400 <= y <= 600:
+                        if self.board[2] == 0:
+                            self.board[2] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 0 <= x <= 200 and 200 <= y <= 400:
+                        if self.board[3] == 0:
+                            self.board[3] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 200 <= x <= 400 and 200 <= y <= 400:
+                        if self.board[4] == 0:
+                            self.board[4] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 400 <= x <= 600 and 200 <= y <= 400:
+                        if self.board[5] == 0:
+                            self.board[5] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 0 <= x <= 200 and 0 <= y <= 200:
+                        if self.board[6] == 0:
+                            self.board[6] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 200 <= x <= 400 and 0 <= y <= 200:
+                        if self.board[7] == 0:
+                            self.board[7] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    elif 400 <= x <= 600 and 0 <= y <= 200:
+                        if self.board[8] == 0:
+                            self.board[8] = "x"
+                        else:
+                            raise Exception("Not allowed")
+                    self.CheckBoard()
+                    self.PcMove()
+                    self.CheckBoard()
+                except Exception:
+                    pass
 
 class GameOverView(arcade.View):
     def __init__(self):
