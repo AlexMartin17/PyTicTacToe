@@ -34,162 +34,155 @@ class GameView(arcade.View):
 
     def __init__(self):
         super().__init__()
-        self.cross = [0,0,0,0,0,0,0,0,0]
-        self.circle = [0,0,0,0,0,0,0,0,0]
-        self.draw = [0,0,0,0,0,0,0,0,0]
+        self.board = [0,0,0,0,0,0,0,0,0]
 
     def CheckBoard(self):
         global win, p, c
 
-        if self.cross[0] == 'x' and self.cross[1] == 'x' and self.cross[2] == 'x':
+        if self.board[0] == 'x' and self.board[1] == 'x' and self.board[2] == 'x':
             if p == "X":
                 win = "p"
             else:
                 print("Computer wins")
                 win == "c"
-        elif self.cross[3] == 'x' and self.cross[4] == 'x' and self.cross[5] == 'x':
-            if p == "X":
-                print("You win!!")
-                win = "p"
-            else:
-                print("Computer wins")
-                win == "c"
-        elif self.cross[6] == 'x' and self.cross[7] == 'x' and self.cross[8] == 'x':
+        elif self.board[3] == 'x' and self.board[4] == 'x' and self.board[5] == 'x':
             if p == "X":
                 print("You win!!")
                 win = "p"
             else:
                 print("Computer wins")
                 win == "c"
-        elif self.cross[0] == 'x' and self.cross[3] == 'x' and self.cross[6] == 'x':
-            if p == "X":
-                print("You win!!")
-                win = "p"
-            else:
-                print("Computer wins")
-                win = "c"
-        elif self.cross[1] == 'x' and self.cross[4] == 'x' and self.cross[7] == 'x':
-            if p == "X":
-                print("You win!!")
-                win = "p"
-            else:
-                print("Computer wins")
-                win = "c"
-        elif self.cross[2] == 'x' and self.cross[5] == 'x' and self.cross[8] == 'x':
-            if p == "X":
-                print("You win!!")
-                win = "p"
-            else:
-                print("Computer wins")
-                win = "c"
-        elif self.cross[0] == 'x' and self.cross[4] == 'x' and self.cross[8] == 'x':
+        elif self.board[6] == 'x' and self.board[7] == 'x' and self.board[8] == 'x':
             if p == "X":
                 print("You win!!")
                 win = "p"
             else:
                 print("Computer wins")
                 win == "c"
-        elif self.cross[2] == 'x' and self.cross[4] == 'x' and self.cross[6] == 'x':
+        elif self.board[0] == 'x' and self.board[3] == 'x' and self.board[6] == 'x':
             if p == "X":
                 print("You win!!")
                 win = "p"
             else:
                 print("Computer wins")
                 win = "c"
-        elif self.circle[0] == 'o' and self.circle[1] == 'o' and self.circle[2] == 'o':
+        elif self.board[1] == 'x' and self.board[4] == 'x' and self.board[7] == 'x':
+            if p == "X":
+                print("You win!!")
+                win = "p"
+            else:
+                print("Computer wins")
+                win = "c"
+        elif self.board[2] == 'x' and self.board[5] == 'x' and self.board[8] == 'x':
+            if p == "X":
+                print("You win!!")
+                win = "p"
+            else:
+                print("Computer wins")
+                win = "c"
+        elif self.board[0] == 'x' and self.board[4] == 'x' and self.board[8] == 'x':
+            if p == "X":
+                print("You win!!")
+                win = "p"
+            else:
+                print("Computer wins")
+                win == "c"
+        elif self.board[2] == 'x' and self.board[4] == 'x' and self.board[6] == 'x':
+            if p == "X":
+                print("You win!!")
+                win = "p"
+            else:
+                print("Computer wins")
+                win = "c"
+        elif self.board[0] == 'o' and self.board[1] == 'o' and self.board[2] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[3] == 'o' and self.circle[4] == 'o' and self.circle[5] == 'o':
+        elif self.board[3] == 'o' and self.board[4] == 'o' and self.board[5] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[6] == 'o' and self.circle[7] == 'o' and self.circle[8] == 'o':
+        elif self.board[6] == 'o' and self.board[7] == 'o' and self.board[8] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[0] == 'o' and self.circle[3] == 'o' and self.circle[6] == 'o':
+        elif self.board[0] == 'o' and self.board[3] == 'o' and self.board[6] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[1] == 'o' and self.circle[4] == 'o' and self.circle[7] == 'o':
+        elif self.board[1] == 'o' and self.board[4] == 'o' and self.board[7] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[2] == 'o' and self.circle[5] == 'o' and self.circle[8] == 'o':
+        elif self.board[2] == 'o' and self.board[5] == 'o' and self.board[8] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[0] == 'o' and self.circle[4] == 'o' and self.circle[8] == 'o':
+        elif self.board[0] == 'o' and self.board[4] == 'o' and self.board[8] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[2] == 'o' and self.circle[4] == 'o' and self.circle[6] == 'o':
+        elif self.board[2] == 'o' and self.board[4] == 'o' and self.board[6] == 'o':
               if p == "O":
                   print("You win!!")
                   win = "p"
               else:
                   print("Computer wins")
                   win = "c"
-        elif self.circle[0] != 0 and self.circle[1] != 0 and self.circle[2] != 0 and self.circle[3] != 0 and self.circle[4] != 0 and self.circle[5] != 0 and self.circle[6] != 0 and self.circle[7] != 0 and self.circle[8] != 0 and self.cross[0] != 0 and self.cross[1] != 0 and self.cross[2] != 0 and self.cross[3] != 0 and self.cross[4] != 0 and self.cross[5] != 0 and self.cross[6] != 0 and self.cross[7] != 0 and self.cross[8] != 0:
-            print("Its a draw") #Currently bugged
-        else:
-            pass
-            
+        elif all(self.board):
+            print("It's a draw")
+            win = "d"
+
         if win != "0":
             game_view = GameOverView()
             self.window.show_view(game_view)
 
     def PcMove(self):
-        global p, c
-        self.cm = random.randrange(9)
-        if c == "X":
-            for x in range(0,9):
-                if int(self.cm) == x:
-                    if self.cross[x] == 0 and self.circle[x] == 0:
-                        self.cross[x] = "x"
-                    else:
-                        self.PcMove()
-                        self.CheckBoard()
-                        for a in self.cross: #for debugging
-                            print(a, end=="")
+          global p, c
+          try:
+              if c == "X":
+                  self.temp = []
+                  for x in range(len(self.board)):
+                      if self.board[x] == 0 and self.board[x] == 0:
+                          self.temp.append(x)
+                  self.cm = random.choice(self.temp)
+                  self.board[self.cm] = "x"
 
-        elif c == "O":
-            for x in range(0,9):
-                if int(self.cm) == x:
-                    if self.circle[x] == 0 and self.cross[x] == 0:
-                        self.circle[x] = "o"
-                    else:
-                        self.PcMove()
-                        self.CheckBoard()
-                        for a in self.circle: #for debugging
-                            print(a, end=="")
+              if c == "O":
+                  self.temp = []
+                  for o in range(len(self.board)):
+                      if self.board[o] == 0 and self.board[o] == 0:
+                          self.temp.append(o)
+                  self.cm = random.choice(self.temp)
+                  self.board[self.cm] = "o"
+          except IndexError:
+              pass
 
     def on_show(self):
         arcade.set_background_color(arcade.color.AZURE)
         if p == "O":
-            GameView.PcMove(self)
+            self.PcMove(self)
         else:
             pass
 
@@ -197,103 +190,102 @@ class GameView(arcade.View):
         global p, c
         arcade.start_render()
         self.shape_list = arcade.ShapeElementList()
-        #tic tac toe lines
         arcade.draw_line(0, 400, 600, 400, arcade.color.WHITE, 5)
         arcade.draw_line(0, 200, 600, 200, arcade.color.WHITE, 5)
         arcade.draw_line(400, 0, 400, 600, arcade.color.WHITE, 5)
         arcade.draw_line(200, 0, 200, 600, arcade.color.WHITE, 5)
 
-        for circle in self.circle:
+        for circle in self.board:
             if circle == "o":
-                if self.circle[0] == "o":
+                if self.board[0] == "o":
                     self.shape = arcade.create_ellipse(100,500,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(100,500,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[1] == "o":
+                if self.board[1] == "o":
                     self.shape = arcade.create_ellipse(300,500,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(300,500,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[2] == "o":
+                if self.board[2] == "o":
                     self.shape = arcade.create_ellipse(500,500,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(500,500,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[3] == "o":
+                if self.board[3] == "o":
                     self.shape = arcade.create_ellipse(100,300,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(100,300,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[4] == "o":
+                if self.board[4] == "o":
                     self.shape = arcade.create_ellipse(300,300,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(300,300,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[5] == "o":
+                if self.board[5] == "o":
                     self.shape = arcade.create_ellipse(500,300,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(500,300,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[6] == "o":
+                if self.board[6] == "o":
                     self.shape = arcade.create_ellipse(100,100,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(100,100,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[7] == "o":
+                if self.board[7] == "o":
                     self.shape = arcade.create_ellipse(300,100,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(300,100,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
-                if self.circle[8] == "o":
+                if self.board[8] == "o":
                     self.shape = arcade.create_ellipse(500,100,100,100,arcade.color.WHITE)
                     self.shape_list.append(self.shape)
                     self.shape = arcade.create_ellipse(500,100,95,95,arcade.color.AZURE)
                     self.shape_list.append(self.shape)
 
-        for cross in self.cross:
+        for cross in self.board:
                 if cross == "x":
-                    if self.cross[0] == "x":
+                    if self.board[0] == "x":
                         self.shape = arcade.create_line(0, 600, 200, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(200, 600, 0, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[1] == "x":
+                    if self.board[1] == "x":
                         self.shape = arcade.create_line(200, 600, 400, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(400, 600, 200, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[2] == "x":
+                    if self.board[2] == "x":
                         self.shape = arcade.create_line(400, 600, 600, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(600, 600, 400, 400, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[3] == "x":
+                    if self.board[3] == "x":
                         self.shape = arcade.create_line(0, 400, 200, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(200, 400, 0, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[4] == "x":
+                    if self.board[4] == "x":
                         self.shape = arcade.create_line(200, 400, 400, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(400, 400, 200, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[5] == "x":
+                    if self.board[5] == "x":
                         self.shape = arcade.create_line(400, 400, 600, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(600, 400, 400, 200, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[6] == "x":
+                    if self.board[6] == "x":
                         self.shape = arcade.create_line(0, 200, 200, 0, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(200, 200, 0, 0, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[7] == "x":
+                    if self.board[7] == "x":
                         self.shape = arcade.create_line(200, 200, 400, 0, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(400, 200, 200, 0, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
-                    if self.cross[8] == "x":
+                    if self.board[8] == "x":
                         self.shape = arcade.create_line(400, 200, 600, 0, arcade.color.WHITE, 5)
                         self.shape_list.append(self.shape)
                         self.shape = arcade.create_line(600, 200, 400, 0, arcade.color.WHITE, 5)
@@ -305,23 +297,23 @@ class GameView(arcade.View):
         if p == "O":
             self.CheckBoard()
             if 0 <= x <= 200 and 400 <= y <= 600:
-                self.circle[0] = "o"
+                self.board[0] = "o"
             elif 200 <= x <= 400 and 400 <= y <= 600:
-                self.circle[1] = "o"
+                self.board[1] = "o"
             elif 400 <= x <= 600 and 400 <= y <= 600:
-                self.circle[2] = "o"
+                self.board[2] = "o"
             elif 0 <= x <= 200 and 200 <= y <= 400:
-                self.circle[3] = "o"
+                self.board[3] = "o"
             elif 200 <= x <= 400 and 200 <= y <= 400:
-                self.circle[4] = "o"
+                self.board[4] = "o"
             elif 400 <= x <= 600 and 200 <= y <= 400:
-                self.circle[5] = "o"
+                self.board[5] = "o"
             elif 0 <= x <= 200 and 0 <= y <= 200:
-                self.circle[6] = "o"
+                self.board[6] = "o"
             elif 200 <= x <= 400 and 0 <= y <= 200:
-                self.circle[7] = "o"
+                self.board[7] = "o"
             elif 400 <= x <= 600 and 0 <= y <= 200:
-                self.circle[8] = "o"
+                self.board[8] = "o"
             self.CheckBoard()
             self.PcMove()
             self.CheckBoard()
@@ -329,23 +321,23 @@ class GameView(arcade.View):
         elif p == "X":
             self.CheckBoard()
             if 0 <= x <= 200 and 400 <= y <= 600:
-                self.cross[0] = "x"
+                self.board[0] = "x"
             elif 200 <= x <= 400 and 400 <= y <= 600:
-                self.cross[1] = "x"
+                self.board[1] = "x"
             elif 400 <= x <= 600 and 400 <= y <= 600:
-                self.cross[2] = "x"
+                self.board[2] = "x"
             elif 0 <= x <= 200 and 200 <= y <= 400:
-                self.cross[3] = "x"
+                self.board[3] = "x"
             elif 200 <= x <= 400 and 200 <= y <= 400:
-                self.cross[4] = "x"
+                self.board[4] = "x"
             elif 400 <= x <= 600 and 200 <= y <= 400:
-                self.cross[5] = "x"
+                self.board[5] = "x"
             elif 0 <= x <= 200 and 0 <= y <= 200:
-                self.cross[6] = "x"
+                self.board[6] = "x"
             elif 200 <= x <= 400 and 0 <= y <= 200:
-                self.cross[7] = "x"
+                self.board[7] = "x"
             elif 400 <= x <= 600 and 0 <= y <= 200:
-                self.cross[8] = "x"
+                self.board[8] = "x"
             self.CheckBoard()
             self.PcMove()
             self.CheckBoard()
