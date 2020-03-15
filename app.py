@@ -11,7 +11,7 @@ HEIGHT = 600
 class MenuView(arcade.View):
     def on_show(self):
         arcade.set_background_color(arcade.color.AZURE)
-        
+
     def on_draw(self):
         arcade.start_render()
         arcade.draw_text("Tic Tac Toe", WIDTH/2, 300, arcade.color.WHITE, font_size=50, anchor_x="center")
@@ -42,17 +42,17 @@ class GameView(arcade.View):
             if p == "X":
                 win = "p"
             else:
-                win == "c"
+                win = "c"
         elif self.board[3] == 'x' and self.board[4] == 'x' and self.board[5] == 'x':
             if p == "X":
                 win = "p"
             else:
-                win == "c"
+                win = "c"
         elif self.board[6] == 'x' and self.board[7] == 'x' and self.board[8] == 'x':
             if p == "X":
                 win = "p"
             else:
-                win == "c"
+                win = "c"
         elif self.board[0] == 'x' and self.board[3] == 'x' and self.board[6] == 'x':
             if p == "X":
                 win = "p"
@@ -72,7 +72,7 @@ class GameView(arcade.View):
             if p == "X":
                 win = "p"
             else:
-                win == "c"
+                win = "c"
         elif self.board[2] == 'x' and self.board[4] == 'x' and self.board[6] == 'x':
             if p == "X":
                 win = "p"
