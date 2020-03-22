@@ -149,7 +149,7 @@ class GameView(arcade.View):
     def on_show(self):
         arcade.set_background_color(arcade.color.AZURE)
         if p == "O":
-            self.PcMove(self)
+            self.PcMove()
         else:
             pass
 
