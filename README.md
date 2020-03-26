@@ -6,6 +6,6 @@ Download at https://github.com/AlexMartin17/PyTicTacToe-Graphical/raw/master/bin
 Tested on Windows 7/10
 
 https://arcade.academy/<br>
-pip install arcade<br>
+pip3 install arcade<br>
 
 <img src="https://raw.githubusercontent.com/AlexMartin17/PyTicTacToe-Graphical/master/img/img1.JPG" width="200" height="200">  <img src="https://raw.githubusercontent.com/AlexMartin17/PyTicTacToe-Graphical/master/img/img2.JPG" width="200" height="200">  <img src="https://raw.githubusercontent.com/AlexMartin17/PyTicTacToe-Graphical/master/img/img3.JPG" width="200" height="200">
