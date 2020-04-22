@@ -1,4 +1,4 @@
-# PyTicTacToe-Graphical
+# PyTicTacToe
 
 Written in Python 3 using Arcade Library<br>
 Standalone Windows binary located at bin/win64<br>
