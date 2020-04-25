@@ -3,7 +3,7 @@
 Written in Python 3 using Arcade Library<br>
 Standalone Windows binary located at bin/win64<br>
 Download at https://github.com/AlexMartin17/PyTicTacToe-Graphical/raw/master/bin/win64/app.exe<br>
-Tested on Windows 7/10
+Tested on Windows 7/10 and MacOS 10.13
 
 https://arcade.academy/<br>
 pip3 install arcade<br>
