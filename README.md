@@ -10,6 +10,7 @@ Tested on Windows 7/10 and MacOS 10.13
 <br>
 Binary files compiled with auto-py-to-exe and py2app
 <br>
+<br>
 https://arcade.academy/<br>
 pip3 install arcade<br>
 pip3 install auto-py-to-exe<br>
